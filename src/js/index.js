@@ -1,4 +1,4 @@
-const apiUrl = "https://backend-lab-53gq.onrender.com/api/workexperience";
+const apiUrl = "http://localhost:3000/api/workexperience";
 import '../styles/main.scss';
 
 async function loadData() {
@@ -20,7 +20,7 @@ async function loadData() {
                 <p class="title">${item.jobtitle} - ${item.location}</p>
                 <span class="date">${formatDate(item.startdate)} - ${formatDate(item.enddate)}</span>
                 <span class="description">${item.description}</span>
-                <button class="delete-btn" data-id="${item.id}">Delete</button>
+                <button class="delete-btn" data-id="${item._id}">Delete</button>
             `;
 
             container.appendChild(div);
@@ -51,8 +51,8 @@ async function deleteItem(id) {
         if(!res.ok) {
             console.error("Kunde inte radera posten");
             deleteMessage.textContent = "Kunde inte radera posten.";
-            deleteItem.classList.remove("success");
-            deleteItem.classList.add("error");
+            deleteMessage.classList.remove("success");
+            deleteMessage.classList.add("error");
             return;
         }
 
@@ -70,7 +70,8 @@ async function deleteItem(id) {
 
 // Formaterar datumsträngen till åååå-mm-dd
 function formatDate(dateString) {
-  return dateString.split("T")[0];
+    if(!dateString) return "";
+    return dateString.split("T")[0];
 }
 
 
