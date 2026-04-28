@@ -13,6 +13,13 @@ En webbapplikation byggd med HTML, CSS och JavaScript som konsumerar ett eget RE
   - **Add** - Formulär för att lägga till nya poster
   - **about** - Information om webbplatsen
 
+## Funktionalitet
+  - Hämta och visa alla poster via GET
+  - Lägger till nya poster med via POST och fomrulärvalidera
+  - Radera poster via DELETE
+  - Visa tydliga fel- och success meddelande i grännssnittet
+  - Data valideras med JavaScript innan Fetch anrop 
+
 ## Installation
 1. Klona projekt
 ```
