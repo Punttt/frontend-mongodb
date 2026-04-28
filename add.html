@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab - Startsidan</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>{LOGO}</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Hem</a></li>
+            <li><a href="/add">Lägga till</a></li>
+            <li><a href="/about">Om oss</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-add">
+        <div class="container-sm">
+            <h2>Lägga till</h2>
+            <form id="add-work">
+              <label for="companyname">Företag:</label>
+              <input type="text" name="companyname" id="companyname">
+
+              <label for="jobtitle">Arbetstitel:</label>
+              <input type="text" name="jobtitle" id="jobtitle">
+
+              <label for="location">Plats:</label>
+              <input type="text" name="location" id="location">
+
+              <label for="startdate">Startdatum:</label>
+              <input type="date" name="startdate" id="startdate">
+
+              <label for="enddate">Startdatum:</label>
+              <input type="date" name="enddate" id="enddate">
+
+              <label for="description">Beskrivning:</label>
+              <textarea name="description" id="description"></textarea>
+
+              <p id="errorMessage" class="error"></p>
+              <p id="successMessage" class="success"></p>
+              <input type="submit" value="Spara">
+            </form>
+        </div>
+    </main>
+    <script type="module" src="./src/js/add.js"></script>
+  </body>
+</html>

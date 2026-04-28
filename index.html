@@ -3,10 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend-mongodb</title>
+    <title>Lab - Startsidan</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <header>
+      <div class="container">
+        <h1>{LOGO}</h1>
+        <nav>
+          <ul>
+            <li><a href="/">Hem</a></li>
+            <li><a href="/add">Lägga till</a></li>
+            <li><a href="/about">Om oss</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-index">
+      <div class="container-sm">
+        <h2>Startsidan</h2>
+        <p id="deleteMessage" class="success"></p>
+        <div id="list"></div>
+      </div>
+    </main>
+    <script type="module" src="./src/js/index.js"></script>
   </body>
 </html>
